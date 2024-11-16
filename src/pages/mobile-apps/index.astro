@@ -1,0 +1,17 @@
+---
+import "@/styles/globals.css";
+
+import Layout from "@/layouts/Layout.astro";
+import SolutionsPage from "@/components/shared/SolutionsPage.astro";
+import { mobileAppsFeatures } from "@/data";
+---
+
+<Layout title="Omnitria | Mobile Apps">
+  <SolutionsPage
+    imageSrc="https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736969/mobile-app-page_tydi2c.png"
+    altText="Omnitria custom mobile app solutions for user engagement and brand loyalty"
+    title="Mobile Apps that Connect and Build Loyalty with Your Users"
+    description="We develop innovative and optimized mobile apps, designed to provide an impeccable user experience and connect you with your audience wherever they are. With a focus on performance, usability and security, our mobile apps are effective tools to strengthen your brand and increase loyalty."
+    features={mobileAppsFeatures}
+  />
+</Layout>

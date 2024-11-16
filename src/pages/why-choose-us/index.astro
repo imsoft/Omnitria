@@ -1,0 +1,137 @@
+---
+import "@/styles/globals.css";
+
+import Layout from "@/layouts/Layout.astro";
+import { Image } from "astro:assets";
+---
+
+<Layout title="Omnitria | Why choose us?">
+  <main>
+    <div class="overflow-hidden bg-white py-12 sm:py-16">
+      <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+        <div class="max-w-4xl">
+          <p class="text-base/7 font-semibold text-neutral-600">Omnitria</p>
+          <h1
+            class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl"
+          >
+            Why Choose Omnitria for Your Digital Transformation
+          </h1>
+          <p class="mt-6 text-balance text-xl/8 text-gray-700">
+            We specialize in empowering businesses with tailored web and mobile
+            applications that drive productivity, enhance collaboration, and
+            support remote teams in achieving more.
+          </p>
+        </div>
+        <section
+          class="mt-20 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16"
+        >
+          <div class="lg:pr-8">
+            <h2
+              class="text-pretty text-2xl font-semibold tracking-tight text-gray-900"
+            >
+              Our Mission
+            </h2>
+            <p class="mt-6 text-base/7 text-gray-600">
+              At Omnitria, we’re committed to creating digital solutions that
+              make a real difference. From enhancing operational efficiency to
+              supporting seamless remote work, our mission is to empower
+              businesses through technology.
+            </p>
+            <p class="mt-8 text-base/7 text-gray-600">
+              We strive to build applications that are not only powerful but
+              also easy to integrate and scale, enabling companies of all sizes
+              to achieve their goals more effectively. Join us in transforming
+              how teams work and grow.
+            </p>
+          </div>
+          <div class="pt-16 lg:row-span-2 lg:-mr-16 xl:mr-auto">
+            <div
+              class="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 lg:gap-4 xl:gap-8"
+            >
+              <div
+                class="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10"
+              >
+                <Image
+                  alt="Omnitria team collaboration for digital transformation"
+                  src="https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736966/why-choose-us-1_pidskz.png"
+                  class="block size-full object-cover"
+                  width={500}
+                  height={500}
+                />
+              </div>
+              <div
+                class="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-40"
+              >
+                <Image
+                  alt="Omnitria supports seamless remote work solutions"
+                  src="https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736967/why-choose-us-2_ofeuoo.png"
+                  class="block size-full object-cover"
+                  width={500}
+                  height={500}
+                />
+              </div>
+              <div
+                class="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10"
+              >
+                <Image
+                  alt="Expert mobile application development by Omnitria"
+                  src="https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736968/why-choose-us-3_wp19dl.png"
+                  class="block size-full object-cover"
+                  width={500}
+                  height={500}
+                />
+              </div>
+              <div
+                class="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-40"
+              >
+                <Image
+                  alt="High-performance web application development by Omnitria"
+                  src="https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736965/why-choose-us-4_sv8jdt.png"
+                  class="block size-full object-cover"
+                  width={500}
+                  height={500}
+                />
+              </div>
+            </div>
+          </div>
+          <div class="max-lg:mt-16 lg:col-span-1">
+            <p class="text-base/7 font-semibold text-gray-500">Our Impact</p>
+            <hr class="mt-6 border-t border-gray-200" />
+            <dl class="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
+              <div
+                class="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4"
+              >
+                <dt class="text-sm/6 text-gray-600">Customer Satisfaction</dt>
+                <dd class="order-first text-6xl font-semibold tracking-tight">
+                  <span>96</span>%
+                </dd>
+              </div>
+              <div
+                class="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4"
+              >
+                <dt class="text-sm/6 text-gray-600">Clients</dt>
+                <dd class="order-first text-6xl font-semibold tracking-tight">
+                  +<span>30</span>
+                </dd>
+              </div>
+              <div
+                class="flex flex-col gap-y-2 max-sm:border-b max-sm:border-dotted max-sm:border-gray-200 max-sm:pb-4"
+              >
+                <dt class="text-sm/6 text-gray-600">Employee Retention Rate</dt>
+                <dd class="order-first text-6xl font-semibold tracking-tight">
+                  <span>93</span>%
+                </dd>
+              </div>
+              <div class="flex flex-col gap-y-2">
+                <dt class="text-sm/6 text-gray-600">Leads Generated</dt>
+                <dd class="order-first text-6xl font-semibold tracking-tight">
+                  <span>5</span>K
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+</Layout>

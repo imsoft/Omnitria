@@ -1,0 +1,384 @@
+---
+import { Image } from "astro:assets";
+---
+
+<header class="bg-white sticky top-0 z-50">
+  <nav
+    class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+    aria-label="Global"
+  >
+    <div class="flex items-center gap-x-12 mr-12">
+      <a href="/" class="-m-1.5 p-1.5">
+        <span class="sr-only">Your Company</span>
+        <Image
+          class="h-8 w-auto"
+          src="https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736950/omnitria-isotype-white_mwkuul.svg"
+          alt="Omnitria logo - Software Development Company"
+          width={32}
+          height={32}
+        />
+      </a>
+    </div>
+    <div class="flex lg:hidden">
+      <button
+        type="button"
+        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+        id="menu-open"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-hidden="true"
+          data-slot="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-12">
+      <div class="relative group">
+        <button
+          type="button"
+          class="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900"
+          aria-expanded="false"
+        >
+          Services
+          <svg
+            class="h-5 w-5 flex-none text-gray-400"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+            data-slot="icon"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <div
+          class="absolute -left-8 top-full z-10 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-150"
+        >
+          <div class="p-4">
+            <div
+              class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
+            >
+              <div
+                class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
+              >
+                <svg
+                  class="h-6 w-6 text-gray-600 group-hover:text-neutral-600"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex-auto">
+                <a href="/web-apps" class="block font-semibold text-gray-900">
+                  Web Apps
+                  <span class="absolute inset-0"></span>
+                </a>
+                <p class="mt-1 text-gray-600">
+                  Custom solutions for unique business needs.
+                </p>
+              </div>
+            </div>
+            <div
+              class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
+            >
+              <div
+                class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
+              >
+                <svg
+                  class="h-6 w-6 text-gray-600 group-hover:text-neutral-600"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex-auto">
+                <a
+                  href="/mobile-apps"
+                  class="block font-semibold text-gray-900"
+                >
+                  Mobile Apps
+                  <span class="absolute inset-0"></span>
+                </a>
+                <p class="mt-1 text-gray-600">
+                  Engaging experiences for users on the go.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+            <a
+              href="https://www.linkedin.com/company/105543636/admin/dashboard/"
+              target="_blank"
+              class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
+            >
+              <svg
+                class="h-6 w-6 text-gray-600 group-hover:text-neutral-600"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25"
+                ></path>
+              </svg>
+              Social Media
+            </a>
+            <a
+              href="/contact"
+              class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 28 28"
+                fill="currentColor"
+                class="size-6 flex-none text-gray-400 mt-1"
+              >
+                <path
+                  d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z"
+                ></path>
+                <path
+                  d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z"
+                ></path>
+              </svg>
+              Contact us
+            </a>
+          </div>
+        </div>
+      </div>
+      <a href="/why-choose-us" class="text-sm/6 font-semibold text-gray-900"
+        >Why choose us?</a
+      >
+      <a href="/our-apps" class="text-sm/6 font-semibold text-gray-900"
+        >Our Apps</a
+      >
+      <a href="/portfolio" class="text-sm/6 font-semibold text-gray-900"
+        >Portfolio</a
+      >
+      <a href="/contact" class="text-sm/6 font-semibold text-gray-900"
+        >Contact</a
+      >
+    </div>
+    <div class="hidden invisible lg:flex lg:flex-1 lg:justify-end">
+      <a href="#" class="text-sm/6 font-semibold text-gray-900"
+        >Log in <span aria-hidden="true">&rarr;</span></a
+      >
+    </div>
+  </nav>
+  <!-- Mobile menu, show/hide based on menu open state. -->
+  <div id="mobile-menu" class="hidden" role="dialog" aria-modal="true">
+    <!-- Background backdrop, show/hide based on slide-over state. -->
+    <div class="fixed inset-0 z-10"></div>
+    <div
+      class="lg:hidden fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+    >
+      <div class="flex items-center justify-between">
+        <a href="/" class="-m-1.5 p-1.5">
+          <span class="sr-only">Your Company</span>
+          <Image
+            class="h-8 w-auto"
+            src="https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736950/omnitria-isotype-white_mwkuul.svg"
+            alt="Omnitria Logo"
+            width={32}
+            height={32}
+          />
+        </a>
+        <button
+          id="menu-close"
+          type="button"
+          class="-m-2.5 rounded-md p-2.5 text-gray-700"
+        >
+          <span class="sr-only">Close menu</span>
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+            data-slot="icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="mt-6 flow-root">
+        <div class="-my-6 divide-y divide-gray-500/10">
+          <div class="space-y-2 py-6">
+            <!-- Services Dropdown -->
+            <details class="-mx-3">
+              <summary
+                class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold text-gray-900 cursor-pointer hover:bg-gray-50"
+              >
+                Services
+                <svg
+                  class="h-5 w-5 flex-none arrow-icon"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </summary>
+              <div class="mt-2 space-y-2">
+                <a
+                  href="/web-apps"
+                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold text-gray-900 hover:bg-gray-50"
+                  >Web Apps</a
+                >
+                <a
+                  href="/mobile-apps"
+                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold text-gray-900 hover:bg-gray-50"
+                  >Mobile Apps</a
+                >
+              </div>
+            </details>
+
+            <!-- Our Apps Dropdown -->
+            <details class="-mx-3">
+              <summary
+                class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold text-gray-900 cursor-pointer hover:bg-gray-50"
+              >
+                Our apps
+                <svg
+                  class="h-5 w-5 flex-none arrow-icon"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </summary>
+              <div class="mt-2 space-y-2">
+                <a
+                  href="/social-media"
+                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold text-gray-900 hover:bg-gray-50"
+                  >Social Media</a
+                >
+                <a
+                  href="/contact-sales"
+                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold text-gray-900 hover:bg-gray-50"
+                  >Contact Sales</a
+                >
+              </div>
+            </details>
+            <a
+              href="/why-choose-us"
+              class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+              >Why choose us?</a
+            >
+            <a
+              href="/our-apps"
+              class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+              >Our Apps</a
+            >
+            <a
+              href="/portfolio"
+              class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+              >Portfolio</a
+            >
+            <a
+              href="/contact"
+              class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+              >Contact</a
+            >
+          </div>
+          <div class="py-6 invisible">
+            <a
+              href="#"
+              class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+              >Log in</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  /* Rotar el icono de flecha hacia arriba cuando el menú está abierto */
+  details[open] > summary .arrow-icon {
+    transform: rotate(180deg);
+  }
+
+  /* Transición suave para el giro */
+  .arrow-icon {
+    transition: transform 0.3s ease;
+  }
+
+  /* Estilos opcionales para animar la transición del menú */
+  #mobile-menu {
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+  }
+</style>
+
+<script>
+  // Obtener elementos
+  const menuOpenBtn = document.getElementById("menu-open");
+  const menuCloseBtn = document.getElementById("menu-close");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  // Función para abrir el menú
+  if (menuOpenBtn) {
+    menuOpenBtn.addEventListener("click", () => {
+      if (mobileMenu) {
+        mobileMenu.classList.remove("hidden");
+      }
+    });
+  }
+
+  // Función para cerrar el menú
+  if (menuCloseBtn) {
+    menuCloseBtn.addEventListener("click", () => {
+      if (mobileMenu) {
+        mobileMenu.classList.add("hidden");
+      }
+    });
+  }
+</script>

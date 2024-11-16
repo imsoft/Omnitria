@@ -1,0 +1,151 @@
+---
+import "@/styles/globals.css";
+
+import type { Project } from "@/interface";
+import Layout from "@/layouts/Layout.astro";
+import ProjectCard from "@/components/project/ProjectCard.astro";
+
+const portfolio: Project[] = [
+  {
+    imageSrc:
+      "https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736956/club-de-estirpe_onruyr.png",
+    title: "Club De Estirpe",
+    description:
+      "A user-friendly platform was created to connect entrepreneurs with investors, enabling secure funding and mentorship.",
+    category: "Entrepreneurship Startup",
+    link: "https://clubdeestirpe.com/",
+  },
+  {
+    imageSrc:
+      "https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736953/constructorarm_gmivcs.png",
+    title: "Constructora RM",
+    description:
+      "Enhanced Constructora RM’s project management and client engagement with tailored digital tools, improving efficiency and communication.",
+    category: "Construction Company",
+    link: "https://constructorarm.mx/",
+  },
+  {
+    imageSrc:
+      "https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736958/construccion-inteligente_v4pmvq.png",
+    title: "Construcción Inteligente",
+    description:
+      "Developed customized digital solutions to streamline operations and enhance project visibility, boosting efficiency for Construcción Inteligente.",
+    category: "Construction Materials Company",
+    link: "https://construccioninteligente.mx/",
+  },
+  {
+    imageSrc:
+      "https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736954/BemastraDental_wc4pq5.png",
+    title: "BemästraDental",
+    description:
+      "Bemästra Dental’s new website offers an easy way for patients to book appointments and explore services, enhancing accessibility to quality care.",
+    category: "Dental Office",
+    link: "https://xn--bemstradental-dfb.com/",
+  },
+  {
+    imageSrc:
+      "https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736961/ferreacabados-jalisco_ilnljw.png",
+    title: "Ferreacabados Jalisco",
+    description:
+      "Developed a streamlined online catalog to enhance user experience and simplify product discovery for Ferreacabados Jalisco’s customers.",
+    category: "Hardware Store",
+    link: "https://ferrejalisco.mx/",
+  },
+  {
+    imageSrc:
+      "https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736959/infinito-empresarial-y-aduanero_vqe7uy.png",
+    title: "Infinito Empresarial y Aduanero",
+    description:
+      "Built a customized digital platform that optimizes service visibility and client engagement for Infinito Empresarial y Aduanero.",
+    category: "Customs Company",
+    link: "https://infinitoad.com/",
+  },
+  {
+    imageSrc:
+      "https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736956/jtp-logistics_zj182m.png",
+    title: "JTP Logistics",
+    description:
+      "Developed a comprehensive digital logistics management platform that enhances service coordination and client access for JTP Logistics.",
+    category: "Logistics Company",
+    link: "https://www.jtp.com.mx/",
+  },
+  {
+    imageSrc:
+      "https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736955/pasteria-la-hidalguense_mcqpyh.png",
+    title: "Pastería La Hidalguense",
+    description:
+      "Created a streamlined digital platform for efficient management across accounting, purchasing, sales, operations, and HR.",
+    category: "Pastes Company",
+    link: "https://lacasadelpaste.vercel.app/",
+  },
+  {
+    imageSrc:
+      "https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736961/profibra_fxtyye.png",
+    title: "Profibra",
+    description:
+      "Created a streamlined digital platform for Profibra, enhancing client engagement and showcasing their high-quality fiberglass products effectively.",
+    category: "Fiberglass Company",
+    link: "https://profibra.com.mx/",
+  },
+  {
+    imageSrc:
+      "https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736954/santa-maria-del-oro-jalisco_jiofrj.png",
+    title: "Santa Maria Del Oro Jalisco",
+    description:
+      "Developed an inviting website for Santa María del Oro, highlighting local attractions and improving visitor engagement.",
+    category: "Government",
+    link: "https://santamariadelorojal.com/",
+  },
+  {
+    imageSrc:
+      "https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736962/steridental_o44rvx.png",
+    title: "Steridental",
+    description:
+      "Created a secure platform for Steridental to streamline dental material sterilization processes, enhancing client service and reliability.",
+    category: "Sterilization Of Dental Materials Company",
+    link: "https://www.app.steridental.mx/login",
+  },
+  {
+    imageSrc:
+      "https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736958/tuxcacuesco_girmc5.png",
+    title: "Tuxcacuesco",
+    description:
+      "Created an accessible platform for Tuxcacuesco, streamlining public information and local government resources for residents.",
+    category: "Government",
+    link: "https://tuxcacuesco.gob.mx/#/",
+  },
+];
+---
+
+<Layout title="Omnitria | Portfolio">
+  <div class="bg-white py-12 sm:py-16">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2
+          class="text-balance text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl"
+        >
+          Our Portfolio
+        </h2>
+        <p class="mt-2 text-lg/8 text-gray-600">
+          Discover the success stories of our clients and see how Omnitria’s
+          custom solutions have driven their growth.
+        </p>
+      </div>
+      <div
+        class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+      >
+        {
+          portfolio.map((project) => (
+            <ProjectCard
+              imageSrc={project.imageSrc}
+              title={project.title}
+              description={project.description}
+              category={project.category}
+              link={project.link}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Layout>
