@@ -1,0 +1,81 @@
+---
+
+---
+
+<button
+  type="button"
+  class="flex h-9 w-9 items-center justify-center rounded-lg transition-all z-30 hover:ring-2 sm:ml-3"
+  id="theme-selector"
+>
+  <span class="sr-only"
+    >Enable <span class="dark:hidden">light</span><span
+      class="hidden dark:inline">dark</span
+    > mode</span
+  >
+
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="h-5 w-5 stroke-zinc-100 hidden dark:inline"
+    stroke-width="1.5"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+    ></path>
+  </svg>
+
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="h-5 w-5 stroke-zinc-900 dark:hidden"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      stroke-line-cap="round"
+      stroke-line-join="round"
+      stroke-width={2}
+      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+    ></path>
+  </svg>
+</button>
+
+<script>
+  // Detectar y aplicar automáticamente el tema del sistema del usuario
+  const applySystemTheme = () => {
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    // Si hay un tema guardado por el usuario, úsalo. De lo contrario, usa el tema del sistema.
+    const userPrefersDark = localStorage.theme === "dark";
+    const userPrefersLight = localStorage.theme === "light";
+
+    if (userPrefersDark || (!userPrefersLight && systemPrefersDark)) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  };
+
+  // Escuchar cambios en el tema del sistema
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+    applySystemTheme();
+  });
+
+  // Cambiar el tema manualmente con el botón
+  document.getElementById("theme-selector")?.addEventListener("click", () => {
+    if (localStorage.theme === "dark") {
+      localStorage.theme = "light";
+      document.documentElement.classList.remove("dark");
+    } else {
+      localStorage.theme = "dark";
+      document.documentElement.classList.add("dark");
+    }
+  });
+
+  // Aplicar el tema al cargar la página
+  applySystemTheme();
+</script>

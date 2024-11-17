@@ -6,13 +6,15 @@ import ContractText from "@/components/shared/ContractText.astro";
 ---
 
 <Layout title="Omnitria | Terms of service">
-  <section class="max-w-3xl mx-auto px-6 py-12">
-    <h1 class="text-3xl font-semibold text-gray-800 mb-6">
+  <section class="max-w-3xl mx-auto px-6 py-12 bg-zinc-50 dark:bg-zinc-900">
+    <h1 class="text-3xl font-semibold text-zinc-900 dark:text-zinc-50 mb-6">
       Omnitria Terms of Service
     </h1>
-    <p class="text-gray-500 text-sm mb-8">Last Updated: 11/15/2024</p>
+    <p class="text-zinc-600 dark:text-zinc-400 text-sm mb-8">
+      Last Updated: 11/15/2024
+    </p>
 
-    <div class="space-y-8 text-gray-700">
+    <div class="space-y-8 text-zinc-700 dark:text-zinc-300">
       <ContractText
         title="1. Acceptance of Terms"
         content="By accessing or using Omnitria services (“we,” “our,” “the platform”), you agree to be bound by these Terms of Service, our Privacy Policies, and any additional policies we may implement. If you do not agree to these terms, you should not use our services."
@@ -29,7 +31,9 @@ import ContractText from "@/components/shared/ContractText.astro";
       />
 
       <section>
-        <h2 class="text-2xl font-semibold mb-4">
+        <h2
+          class="text-2xl font-semibold mb-4 text-zinc-900 dark:text-zinc-50"
+        >
           4. Permitted Use and Restrictions
         </h2>
         <p class="leading-relaxed">
@@ -65,21 +69,19 @@ import ContractText from "@/components/shared/ContractText.astro";
       />
 
       <section>
-        <h2 class="text-2xl font-semibold mb-4">
+        <h2
+          class="text-2xl font-semibold mb-4 text-zinc-900 dark:text-zinc-50"
+        >
           6. Privacy and Data Protection
         </h2>
         <p class="leading-relaxed">
           Omnitria is committed to protecting the privacy and confidentiality of
-          our customers' information. Our <a href="/privacy-policy"
+          our customers' information. Our <a
+            href="/privacy-policy"
+            class="text-zinc-700 dark:text-zinc-300 underline"
             >Privacy Policy</a
           > describes how we collect, use and protect personal data and any confidential
           information provided in the course of our services.
-        </p>
-        <p class="leading-relaxed mt-4">
-          During the development of software and the provision of our services,
-          Omnitria may have access to confidential information and personal data
-          of the customer necessary to fulfill the service contract. We commit
-          to:
         </p>
         <ul class="list-disc pl-5 space-y-2 mt-2">
           <li>
@@ -96,13 +98,6 @@ import ContractText from "@/components/shared/ContractText.astro";
             provision of the service or required by law.
           </li>
         </ul>
-        <p class="leading-relaxed">
-          By using our services, the customer agrees that Omnitria will handle
-          their information in accordance with our Privacy Policy. For more
-          details on data collection and use, please see our <a
-            href="/privacy-policy">Privacy Policy</a
-          >.
-        </p>
       </section>
 
       <ContractText
@@ -126,12 +121,20 @@ import ContractText from "@/components/shared/ContractText.astro";
       />
 
       <section>
-        <h2 class="text-2xl font-semibold mb-4">11. Contact</h2>
+        <h2
+          class="text-2xl font-semibold mb-4 text-zinc-900 dark:text-zinc-50"
+        >
+          11. Contact
+        </h2>
         <p class="leading-relaxed">
           For any questions or comments about these Terms, please contact us at: <br
           />
           <strong>Correo Electrónico:</strong>
-          <a href="mailto:omnitria.com@gmail.com">omnitria.com@gmail.com</a>
+          <a
+            href="mailto:omnitria.com@gmail.com"
+            class="text-zinc-700 dark:text-zinc-300 underline"
+            >omnitria.com@gmail.com</a
+          >
         </p>
       </section>
     </div>

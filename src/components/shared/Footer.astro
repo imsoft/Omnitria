@@ -2,18 +2,22 @@
 import { Image } from "astro:assets";
 ---
 
-<footer class="bg-white">
+<footer class="bg-white dark:bg-zinc-900">
   <div class="mx-auto max-w-7xl px-6 py-4 sm:py-6 lg:px-8 lg:py-8">
     <div class="mx-auto max-w-3xl text-center">
       <hgroup>
-        <h2 class="text-base/7 font-semibold text-neutral-600">Omnitria</h2>
+        <h2 class="text-base/7 font-semibold text-zinc-700 dark:text-zinc-400">
+          Omnitria
+        </h2>
         <p
-          class="mt-2 text-balance text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl"
+          class="mt-2 text-balance text-4xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-5xl"
         >
           Empower Your Business with Custom Web and Mobile Applications
         </p>
       </hgroup>
-      <p class="mx-auto mt-6 max-w-xl text-pretty text-lg/8 text-gray-600">
+      <p
+        class="mx-auto mt-6 max-w-xl text-pretty text-lg/8 text-zinc-700 dark:text-zinc-400"
+      >
         Whether you're looking to streamline operations, enhance customer
         engagement, or drive growth, our web and mobile solutions are designed
         to help you succeed. Transform your digital presence today.
@@ -21,85 +25,110 @@ import { Image } from "astro:assets";
       <div class="mt-8 flex justify-center">
         <a
           href="/contact"
-          class="rounded-md bg-neutral-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-neutral-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600"
-          >Start Your Project</a
+          class="rounded-md bg-zinc-600 dark:bg-zinc-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-zinc-500 dark:hover:bg-zinc-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-600 dark:focus-visible:outline-zinc-500"
         >
+          Start Your Project
+        </a>
       </div>
     </div>
     <div
-      class="mt-24 border-t border-gray-900/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8"
+      class="mt-24 border-t border-zinc-300 dark:border-zinc-600 pt-12 xl:grid xl:grid-cols-3 xl:gap-8"
     >
       <Image
-        class="h-9"
+        id="logo-light"
+        class="h-9 w-auto dark:hidden"
         src="https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736950/omnitria-isotype-white_mwkuul.svg"
-        alt="Omnitria - Custom Software Development for Web and Mobile"
+        alt="Omnitria - Custom Software Development for Web and Mobile - Light Theme"
+        width={36}
+        height={36}
+      />
+
+      <Image
+        id="logo-dark"
+        class="hidden h-9 w-auto dark:block"
+        src="https://res.cloudinary.com/dldo1zcgz/image/upload/v1731881520/omnitria-isotype_black_xzedea.svg"
+        alt="Omnitria - Custom Software Development for Web and Mobile - Dark Theme"
         width={36}
         height={36}
       />
       <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
         <div class="md:grid md:grid-cols-2 md:gap-8">
           <div>
-            <h3 class="text-sm/6 font-semibold text-gray-950">Services</h3>
+            <h3 class="text-sm/6 font-semibold text-zinc-900 dark:text-zinc-50">
+              Services
+            </h3>
             <ul role="list" class="mt-6 space-y-4">
               <li>
                 <a
                   href="/web-apps"
-                  class="text-sm/6 text-gray-600 hover:text-gray-900"
-                  >Web Apps</a
+                  class="text-sm/6 text-zinc-700 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50"
                 >
+                  Web Apps
+                </a>
               </li>
               <li>
                 <a
                   href="/mobile-apps"
-                  class="text-sm/6 text-gray-600 hover:text-gray-900"
-                  >Mobile Apps</a
+                  class="text-sm/6 text-zinc-700 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50"
                 >
+                  Mobile Apps
+                </a>
               </li>
             </ul>
           </div>
           <div>
-            <h3 class="text-sm/6 font-semibold text-gray-950">Company</h3>
+            <h3 class="text-sm/6 font-semibold text-zinc-900 dark:text-zinc-50">
+              Company
+            </h3>
             <ul role="list" class="mt-6 space-y-4">
               <li>
                 <a
                   href="/why-choose-us"
-                  class="text-sm/6 text-gray-600 hover:text-gray-900"
-                  >Why choose us?</a
+                  class="text-sm/6 text-zinc-700 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50"
                 >
+                  Why choose us?
+                </a>
               </li>
               <li>
                 <a
                   href="/portfolio"
-                  class="text-sm/6 text-gray-600 hover:text-gray-900"
-                  >Portfolio</a
+                  class="text-sm/6 text-zinc-700 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50"
                 >
+                  Portfolio
+                </a>
               </li>
               <li>
                 <a
                   href="/contact"
-                  class="text-sm/6 text-gray-600 hover:text-gray-900">Contact</a
+                  class="text-sm/6 text-zinc-700 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50"
                 >
+                  Contact
+                </a>
               </li>
             </ul>
           </div>
         </div>
         <div class="md:grid md:grid-cols-2 md:gap-8">
           <div class="mt-10 md:mt-0">
-            <h3 class="text-sm/6 font-semibold text-gray-950">Legal</h3>
+            <h3 class="text-sm/6 font-semibold text-zinc-900 dark:text-zinc-50">
+              Legal
+            </h3>
             <ul role="list" class="mt-6 space-y-4">
               <li>
                 <a
                   href="/terms-of-service"
-                  class="text-sm/6 text-gray-600 hover:text-gray-900"
-                  >Terms of service</a
+                  class="text-sm/6 text-zinc-700 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50"
                 >
+                  Terms of service
+                </a>
               </li>
               <li>
                 <a
                   href="/privacy-policy"
-                  class="text-sm/6 text-gray-600 hover:text-gray-900"
-                  >Privacy policy</a
+                  class="text-sm/6 text-zinc-700 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50"
                 >
+                  Privacy policy
+                </a>
               </li>
             </ul>
           </div>
@@ -107,13 +136,13 @@ import { Image } from "astro:assets";
       </div>
     </div>
     <div
-      class="mt-12 border-t border-gray-900/10 pt-8 md:flex md:items-center md:justify-between"
+      class="mt-12 border-t border-zinc-300 dark:border-zinc-600 pt-8 md:flex md:items-center md:justify-between"
     >
       <div class="flex gap-x-6 md:order-2">
         <a
           href="https://www.linkedin.com/company/omnitria"
           target="_blank"
-          class="text-gray-600 hover:text-gray-800"
+          class="text-zinc-700 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50"
         >
           <span class="sr-only">LinkedIn</span>
           <svg
@@ -122,15 +151,16 @@ import { Image } from "astro:assets";
             fill="currentColor"
             viewBox="0 0 512 512"
             aria-hidden="true"
-            ><path
-              d="M444.17 32H70.28C49.85 32 32 46.7 32 66.89v374.72C32 461.91 49.85 480 70.28 480h373.78c20.54 0 35.94-18.21 35.94-38.39V66.89C480.12 46.7 464.6 32 444.17 32zm-273.3 373.43h-64.18V205.88h64.18zM141 175.54h-.46c-20.54 0-33.84-15.29-33.84-34.43 0-19.49 13.65-34.42 34.65-34.42s33.85 14.82 34.31 34.42c-.01 19.14-13.31 34.43-34.66 34.43zm264.43 229.89h-64.18V296.32c0-26.14-9.34-44-32.56-44-17.74 0-28.24 12-32.91 23.69-1.75 4.2-2.22 9.92-2.22 15.76v113.66h-64.18V205.88h64.18v27.77c9.34-13.3 23.93-32.44 57.88-32.44 42.13 0 74 27.77 74 87.64z"
-            ></path></svg
           >
+            <path
+              d="M444.17 32H70.28C49.85 32 32 46.7 32 66.89v374.72C32 461.91 49.85 480 70.28 480h373.78c20.54 0 35.94-18.21 35.94-38.39V66.89C480.12 46.7 464.6 32 444.17 32zm-273.3 373.43h-64.18V205.88h64.18zM141 175.54h-.46c-20.54 0-33.84-15.29-33.84-34.43 0-19.49 13.65-34.42 34.65-34.42s33.85 14.82 34.31 34.42c-.01 19.14-13.31 34.43-34.66 34.43zm264.43 229.89h-64.18V296.32c0-26.14-9.34-44-32.56-44-17.74 0-28.24 12-32.91 23.69-1.75 4.2-2.22 9.92-2.22 15.76v113.66h-64.18V205.88h64.18v27.77c9.34-13.3 23.93-32.44 57.88-32.44 42.13 0 74 27.77 74 87.64z"
+            ></path>
+          </svg>
         </a>
         <a
           href="https://www.youtube.com/channel/UCOuHzIMbuTiWvU4iiKV_5Ww"
           target="_blank"
-          class="text-gray-600 hover:text-gray-800"
+          class="text-zinc-700 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50"
         >
           <span class="sr-only">YouTube</span>
           <svg
@@ -146,8 +176,10 @@ import { Image } from "astro:assets";
           </svg>
         </a>
       </div>
-      <p class="mt-8 text-sm/6 text-gray-600 md:order-1 md:mt-0">
-        &copy; 2024 Your Company, Inc. All rights reserved.
+      <p
+        class="mt-8 text-sm/6 text-zinc-700 dark:text-zinc-400 md:order-1 md:mt-0"
+      >
+        &copy; 2024 Omnitria, Inc. All rights reserved.
       </p>
     </div>
   </div>

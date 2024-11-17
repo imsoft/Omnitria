@@ -2,22 +2,25 @@
 import { Image } from "astro:assets";
 ---
 
-<div class="bg-white py-12 sm:py-16">
+<div class="bg-white dark:bg-zinc-900 py-12 sm:py-16">
   <div class="mx-auto max-w-3xl px-6 lg:max-w-7xl lg:px-8">
-    <h2 class="text-center text-base/7 font-semibold text-neutral-600">
+    <h2
+      class="text-center text-base/7 font-semibold text-zinc-700 dark:text-zinc-400"
+    >
       Omnitria
     </h2>
     <p
-      class="mx-auto mt-2 max-w-3xl text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl"
+      class="mx-auto mt-2 max-w-3xl text-balance text-center text-4xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-5xl"
     >
       Everything You Need to Launch Your Web and Mobile Applications
     </p>
     <div
       class="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2"
     >
+      <!-- Card 1 -->
       <div class="relative lg:col-span-3">
         <div
-          class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]"
+          class="absolute inset-px rounded-lg bg-zinc-50 dark:bg-zinc-800 max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]"
         >
         </div>
         <div
@@ -31,25 +34,35 @@ import { Image } from "astro:assets";
             height={500}
           />
           <div class="p-10 pt-4">
-            <h3 class="text-sm/4 font-semibold text-neutral-600">
+            <h3
+              class="text-sm/4 font-semibold text-zinc-700 dark:text-zinc-400"
+            >
               Digital Transformation
             </h3>
-            <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
+            <p
+              class="mt-2 text-lg font-medium tracking-tight text-zinc-900 dark:text-zinc-50"
+            >
               Custom App and Direct Connection
             </p>
-            <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
+            <p
+              class="mt-2 max-w-lg text-sm/6 text-zinc-700 dark:text-zinc-400"
+            >
               We turn your vision into a personalized app that connects directly
               with your customers on their mobile devices.
             </p>
           </div>
         </div>
         <div
-          class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]"
+          class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-zinc-300 dark:ring-zinc-600 max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]"
         >
         </div>
       </div>
+
+      <!-- Card 2 -->
       <div class="relative lg:col-span-3">
-        <div class="absolute inset-px rounded-lg bg-white lg:rounded-tr-[2rem]">
+        <div
+          class="absolute inset-px rounded-lg bg-zinc-50 dark:bg-zinc-800 lg:rounded-tr-[2rem]"
+        >
         </div>
         <div
           class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-tr-[calc(2rem+1px)]"
@@ -62,25 +75,35 @@ import { Image } from "astro:assets";
             height={500}
           />
           <div class="p-10 pt-4">
-            <h3 class="text-sm/4 font-semibold text-neutral-600">
+            <h3
+              class="text-sm/4 font-semibold text-zinc-700 dark:text-zinc-400"
+            >
               User Experience
             </h3>
-            <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
+            <p
+              class="mt-2 text-lg font-medium tracking-tight text-zinc-900 dark:text-zinc-50"
+            >
               Intuitive and Attractive Design
             </p>
-            <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
+            <p
+              class="mt-2 max-w-lg text-sm/6 text-zinc-700 dark:text-zinc-400"
+            >
               We design simple and functional interfaces that increase user
               satisfaction and loyalty.
             </p>
           </div>
         </div>
         <div
-          class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-tr-[2rem]"
+          class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-zinc-300 dark:ring-zinc-600 lg:rounded-tr-[2rem]"
         >
         </div>
       </div>
+
+      <!-- Additional Cards -->
       <div class="relative lg:col-span-2">
-        <div class="absolute inset-px rounded-lg bg-white lg:rounded-bl-[2rem]">
+        <div
+          class="absolute inset-px rounded-lg bg-zinc-50 dark:bg-zinc-800 lg:rounded-bl-[2rem]"
+        >
         </div>
         <div
           class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-bl-[calc(2rem+1px)]"
@@ -93,25 +116,33 @@ import { Image } from "astro:assets";
             height={500}
           />
           <div class="p-10 pt-4">
-            <h3 class="text-sm/4 font-semibold text-neutral-600">
+            <h3
+              class="text-sm/4 font-semibold text-zinc-700 dark:text-zinc-400"
+            >
               Performance
             </h3>
-            <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
+            <p
+              class="mt-2 text-lg font-medium tracking-tight text-zinc-900 dark:text-zinc-50"
+            >
               High Performance and Speed
             </p>
-            <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
+            <p
+              class="mt-2 max-w-lg text-sm/6 text-zinc-700 dark:text-zinc-400"
+            >
               We develop apps optimized to load quickly and run smoothly on any
               device, maximizing user satisfaction.
             </p>
           </div>
         </div>
         <div
-          class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-bl-[2rem]"
+          class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-zinc-300 dark:ring-zinc-600 lg:rounded-bl-[2rem]"
         >
         </div>
       </div>
+      <!-- Card 4 -->
       <div class="relative lg:col-span-2">
-        <div class="absolute inset-px rounded-lg bg-white"></div>
+        <div class="absolute inset-px rounded-lg bg-zinc-50 dark:bg-zinc-800">
+        </div>
         <div
           class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]"
         >
@@ -123,26 +154,33 @@ import { Image } from "astro:assets";
             height={500}
           />
           <div class="p-10 pt-4">
-            <h3 class="text-sm/4 font-semibold text-neutral-600">
+            <h3
+              class="text-sm/4 font-semibold text-zinc-700 dark:text-zinc-400"
+            >
               Compatibility
             </h3>
-            <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
+            <p
+              class="mt-2 text-lg font-medium tracking-tight text-zinc-900 dark:text-zinc-50"
+            >
               Continuous Updates and Compatibility
             </p>
-            <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
+            <p
+              class="mt-2 max-w-lg text-sm/6 text-zinc-700 dark:text-zinc-400"
+            >
               We make sure your app is always compatible with the latest
               versions of iOS and Android for stable operation.
             </p>
           </div>
         </div>
         <div
-          class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5"
+          class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-zinc-300 dark:ring-zinc-600"
         >
         </div>
       </div>
+      <!-- Card 5 -->
       <div class="relative lg:col-span-2">
         <div
-          class="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]"
+          class="absolute inset-px rounded-lg bg-zinc-50 dark:bg-zinc-800 max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]"
         >
         </div>
         <div
@@ -156,18 +194,26 @@ import { Image } from "astro:assets";
             height={500}
           />
           <div class="p-10 pt-4">
-            <h3 class="text-sm/4 font-semibold text-neutral-600">Security</h3>
-            <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
+            <h3
+              class="text-sm/4 font-semibold text-zinc-700 dark:text-zinc-400"
+            >
+              Security
+            </h3>
+            <p
+              class="mt-2 text-lg font-medium tracking-tight text-zinc-900 dark:text-zinc-50"
+            >
               Data Protection and Privacy
             </p>
-            <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
+            <p
+              class="mt-2 max-w-lg text-sm/6 text-zinc-700 dark:text-zinc-400"
+            >
               We implement advanced security protocols to protect your users’
               information and build trust in your brand.
             </p>
           </div>
         </div>
         <div
-          class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]"
+          class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-zinc-300 dark:ring-zinc-600 max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]"
         >
         </div>
       </div>

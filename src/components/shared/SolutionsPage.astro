@@ -6,7 +6,7 @@ const { imageSrc, altText, title, description, features } =
   Astro.props as OurService;
 ---
 
-<div class="bg-white">
+<div class="bg-zinc-50 dark:bg-zinc-900">
   <div aria-hidden="true" class="relative">
     <Image
       src={imageSrc}
@@ -15,17 +15,22 @@ const { imageSrc, altText, title, description, features } =
       width={1920}
       height={1080}
     />
-    <div class="absolute inset-0 bg-gradient-to-t from-white"></div>
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-zinc-50 dark:from-zinc-900"
+    >
+    </div>
   </div>
 
   <div
     class="relative mx-auto -mt-12 max-w-7xl px-4 pb-16 sm:px-6 sm:pb-24 lg:px-8"
   >
     <div class="mx-auto max-w-2xl text-center lg:max-w-5xl">
-      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+      <h2
+        class="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl"
+      >
         {title}
       </h2>
-      <p class="mt-4 text-gray-500">{description}</p>
+      <p class="mt-4 text-zinc-700 dark:text-zinc-400">{description}</p>
     </div>
 
     <dl
@@ -33,9 +38,13 @@ const { imageSrc, altText, title, description, features } =
     >
       {
         features.map((feature) => (
-          <div class="border-t border-gray-200 pt-4">
-            <dt class="font-medium text-gray-900">{feature.title}</dt>
-            <dd class="mt-2 text-sm text-gray-500">{feature.description}</dd>
+          <div class="border-t border-zinc-300 dark:border-zinc-600 pt-4">
+            <dt class="font-medium text-zinc-900 dark:text-zinc-50">
+              {feature.title}
+            </dt>
+            <dd class="mt-2 text-sm text-zinc-700 dark:text-zinc-400">
+              {feature.description}
+            </dd>
           </div>
         ))
       }

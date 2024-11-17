@@ -1,29 +1,44 @@
 ---
 import { Image } from "astro:assets";
+import ThemeToogle from "./ThemeToogle.astro";
 ---
 
-<header class="bg-white sticky top-0 z-50">
+<header class="bg-white dark:bg-zinc-900 sticky top-0 z-50">
   <nav
     class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
     aria-label="Global"
   >
     <div class="flex items-center gap-x-12 mr-12">
       <a href="/" class="-m-1.5 p-1.5">
-        <span class="sr-only">Your Company</span>
+        <span class="sr-only">Omnitria</span>
         <Image
-          class="h-8 w-auto"
+          id="logo-light"
+          class="h-8 w-auto dark:hidden"
           src="https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736950/omnitria-isotype-white_mwkuul.svg"
-          alt="Omnitria logo - Software Development Company"
+          alt="Omnitria logo - Software Development Company - Light Theme"
+          width={32}
+          height={32}
+        />
+
+        <Image
+          id="logo-dark"
+          class="hidden h-8 w-auto dark:block"
+          src="https://res.cloudinary.com/dldo1zcgz/image/upload/v1731881520/omnitria-isotype_black_xzedea.svg"
+          alt="Omnitria logo - Software Development Company - Dark Theme"
           width={32}
           height={32}
         />
       </a>
     </div>
-    <div class="flex lg:hidden">
+    <div class="order-1 ml-56">
+      <ThemeToogle />
+    </div>
+    <div class="flex order-2 lg:hidden">
       <button
         type="button"
-        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
         id="menu-open"
+        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+        aria-label="Open main menu"
       >
         <span class="sr-only">Open main menu</span>
         <svg
@@ -33,7 +48,6 @@ import { Image } from "astro:assets";
           stroke-width="1.5"
           stroke="currentColor"
           aria-hidden="true"
-          data-slot="icon"
         >
           <path
             stroke-linecap="round"
@@ -46,16 +60,16 @@ import { Image } from "astro:assets";
       <div class="relative group">
         <button
           type="button"
-          class="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900"
+          class="flex items-center gap-x-1 text-sm font-semibold text-gray-900 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
           aria-expanded="false"
+          aria-label="Toggle services menu"
         >
           Services
           <svg
-            class="h-5 w-5 flex-none text-gray-400"
+            class="h-5 w-5 flex-none text-gray-400 dark:text-gray-500 transition-transform duration-300"
             viewBox="0 0 20 20"
             fill="currentColor"
             aria-hidden="true"
-            data-slot="icon"
           >
             <path
               fill-rule="evenodd"
@@ -64,23 +78,22 @@ import { Image } from "astro:assets";
           </svg>
         </button>
         <div
-          class="absolute -left-8 top-full z-10 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-150"
+          class="absolute -left-8 top-full z-10 w-screen max-w-md overflow-hidden rounded-3xl bg-white dark:bg-gray-800 shadow-lg ring-1 ring-gray-900/5 dark:ring-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-150"
         >
           <div class="p-4">
             <div
-              class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
+              class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm hover:bg-gray-50 dark:hover:bg-gray-700"
             >
               <div
-                class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
+                class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 dark:bg-gray-700 group-hover:bg-white dark:group-hover:bg-gray-600"
               >
                 <svg
-                  class="h-6 w-6 text-gray-600 group-hover:text-neutral-600"
+                  class="h-6 w-6 text-gray-600 dark:text-gray-300 group-hover:text-neutral-600 dark:group-hover:text-white"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="size-6"
                 >
                   <path
                     stroke-linecap="round"
@@ -90,29 +103,31 @@ import { Image } from "astro:assets";
                 </svg>
               </div>
               <div class="flex-auto">
-                <a href="/web-apps" class="block font-semibold text-gray-900">
+                <a
+                  href="/web-apps"
+                  class="block font-semibold text-gray-900 dark:text-white"
+                >
                   Web Apps
                   <span class="absolute inset-0"></span>
                 </a>
-                <p class="mt-1 text-gray-600">
+                <p class="mt-1 text-gray-600 dark:text-gray-400">
                   Custom solutions for unique business needs.
                 </p>
               </div>
             </div>
             <div
-              class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
+              class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm hover:bg-gray-50 dark:hover:bg-gray-700"
             >
               <div
-                class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
+                class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 dark:bg-gray-700 group-hover:bg-white dark:group-hover:bg-gray-600"
               >
                 <svg
-                  class="h-6 w-6 text-gray-600 group-hover:text-neutral-600"
+                  class="h-6 w-6 text-gray-600 dark:text-gray-300 group-hover:text-neutral-600 dark:group-hover:text-white"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="size-6"
                 >
                   <path
                     stroke-linecap="round"
@@ -124,31 +139,32 @@ import { Image } from "astro:assets";
               <div class="flex-auto">
                 <a
                   href="/mobile-apps"
-                  class="block font-semibold text-gray-900"
+                  class="block font-semibold text-gray-900 dark:text-white"
                 >
                   Mobile Apps
                   <span class="absolute inset-0"></span>
                 </a>
-                <p class="mt-1 text-gray-600">
+                <p class="mt-1 text-gray-600 dark:text-gray-400">
                   Engaging experiences for users on the go.
                 </p>
               </div>
             </div>
           </div>
-          <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+          <div
+            class="grid grid-cols-2 divide-x divide-gray-900/5 dark:divide-gray-700 bg-gray-50 dark:bg-gray-700"
+          >
             <a
               href="https://www.linkedin.com/company/105543636/admin/dashboard/"
               target="_blank"
-              class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
+              class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600"
             >
               <svg
-                class="h-6 w-6 text-gray-600 group-hover:text-neutral-600"
+                class="h-6 w-6 text-gray-600 dark:text-gray-300 group-hover:text-neutral-600 dark:group-hover:text-white"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="size-6"
               >
                 <path
                   stroke-linecap="round"
@@ -160,13 +176,13 @@ import { Image } from "astro:assets";
             </a>
             <a
               href="/contact"
-              class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
+              class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 28 28"
                 fill="currentColor"
-                class="size-6 flex-none text-gray-400 mt-1"
+                class="h-6 w-6 text-gray-400 dark:text-gray-300"
               >
                 <path
                   d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z"
@@ -180,23 +196,38 @@ import { Image } from "astro:assets";
           </div>
         </div>
       </div>
-      <a href="/why-choose-us" class="text-sm/6 font-semibold text-gray-900"
-        >Why choose us?</a
+      <a
+        href="/why-choose-us"
+        class="text-sm font-semibold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition duration-150"
       >
-      <a href="/our-apps" class="text-sm/6 font-semibold text-gray-900"
-        >Our Apps</a
+        Why choose us?
+      </a>
+      <a
+        href="/our-apps"
+        class="text-sm font-semibold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition duration-150"
       >
-      <a href="/portfolio" class="text-sm/6 font-semibold text-gray-900"
-        >Portfolio</a
+        Our Apps
+      </a>
+      <a
+        href="/portfolio"
+        class="text-sm font-semibold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition duration-150"
       >
-      <a href="/contact" class="text-sm/6 font-semibold text-gray-900"
-        >Contact</a
+        Portfolio
+      </a>
+      <a
+        href="/contact"
+        class="text-sm font-semibold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition duration-150"
       >
+        Contact
+      </a>
     </div>
     <div class="hidden invisible lg:flex lg:flex-1 lg:justify-end">
-      <a href="#" class="text-sm/6 font-semibold text-gray-900"
-        >Log in <span aria-hidden="true">&rarr;</span></a
+      <a
+        href="#"
+        class="text-sm font-semibold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition duration-150"
       >
+        Log in <span aria-hidden="true">&rarr;</span>
+      </a>
     </div>
   </nav>
   <!-- Mobile menu, show/hide based on menu open state. -->
@@ -204,11 +235,11 @@ import { Image } from "astro:assets";
     <!-- Background backdrop, show/hide based on slide-over state. -->
     <div class="fixed inset-0 z-10"></div>
     <div
-      class="lg:hidden fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+      class="lg:hidden fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:sm:ring-gray-700 transition-all duration-300 ease-in-out"
     >
       <div class="flex items-center justify-between">
         <a href="/" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
+          <span class="sr-only">Omnitria</span>
           <Image
             class="h-8 w-auto"
             src="https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736950/omnitria-isotype-white_mwkuul.svg"
@@ -220,7 +251,7 @@ import { Image } from "astro:assets";
         <button
           id="menu-close"
           type="button"
-          class="-m-2.5 rounded-md p-2.5 text-gray-700"
+          class="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 dark:focus:ring-gray-400"
         >
           <span class="sr-only">Close menu</span>
           <svg
@@ -235,21 +266,23 @@ import { Image } from "astro:assets";
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
-              d="M6 18 18 6M6 6l12 12"></path>
+              d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </button>
       </div>
       <div class="mt-6 flow-root">
-        <div class="-my-6 divide-y divide-gray-500/10">
+        <div
+          class="-my-6 divide-y divide-gray-500/10 dark:divide-gray-700 transition-colors duration-200 ease-in-out"
+        >
           <div class="space-y-2 py-6">
             <!-- Services Dropdown -->
             <details class="-mx-3">
               <summary
-                class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold text-gray-900 cursor-pointer hover:bg-gray-50"
+                class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold text-gray-900 cursor-pointer hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800 transition-colors duration-200 ease-in-out"
               >
                 Services
                 <svg
-                  class="h-5 w-5 flex-none arrow-icon"
+                  class="h-5 w-5 flex-none arrow-icon transition-transform duration-200"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                   aria-hidden="true"
@@ -263,12 +296,12 @@ import { Image } from "astro:assets";
               <div class="mt-2 space-y-2">
                 <a
                   href="/web-apps"
-                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold text-gray-900 hover:bg-gray-50"
+                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800 transition-colors duration-200 ease-in-out"
                   >Web Apps</a
                 >
                 <a
                   href="/mobile-apps"
-                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold text-gray-900 hover:bg-gray-50"
+                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800 transition-colors duration-200 ease-in-out"
                   >Mobile Apps</a
                 >
               </div>
@@ -277,11 +310,11 @@ import { Image } from "astro:assets";
             <!-- Our Apps Dropdown -->
             <details class="-mx-3">
               <summary
-                class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold text-gray-900 cursor-pointer hover:bg-gray-50"
+                class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold text-gray-900 cursor-pointer hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800 transition-colors duration-200 ease-in-out"
               >
                 Our apps
                 <svg
-                  class="h-5 w-5 flex-none arrow-icon"
+                  class="h-5 w-5 flex-none arrow-icon transition-transform duration-200"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                   aria-hidden="true"
@@ -295,43 +328,50 @@ import { Image } from "astro:assets";
               <div class="mt-2 space-y-2">
                 <a
                   href="/social-media"
-                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold text-gray-900 hover:bg-gray-50"
-                  >Social Media</a
+                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800 transition-colors duration-200 ease-in-out"
                 >
+                  Social Media
+                </a>
                 <a
                   href="/contact-sales"
-                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold text-gray-900 hover:bg-gray-50"
-                  >Contact Sales</a
+                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800 transition-colors duration-200 ease-in-out"
                 >
+                  Contact Sales
+                </a>
               </div>
             </details>
             <a
               href="/why-choose-us"
-              class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-              >Why choose us?</a
+              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800 transition-colors duration-200 ease-in-out"
             >
+              Why choose us?
+            </a>
             <a
               href="/our-apps"
-              class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-              >Our Apps</a
+              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800 transition-colors duration-200 ease-in-out"
             >
+              Our Apps
+            </a>
             <a
               href="/portfolio"
-              class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-              >Portfolio</a
+              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800 transition-colors duration-200 ease-in-out"
             >
+              Portfolio
+            </a>
             <a
               href="/contact"
-              class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-              >Contact</a
+              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800 transition-colors duration-200 ease-in-out"
             >
+              Contact
+            </a>
           </div>
           <div class="py-6 invisible">
             <a
               href="#"
-              class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-              >Log in</a
+              class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800 transition-colors duration-200 ease-in-out"
             >
+              Log in
+            </a>
           </div>
         </div>
       </div>

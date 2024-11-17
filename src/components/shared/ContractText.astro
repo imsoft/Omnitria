@@ -7,9 +7,11 @@ interface Props {
 const { title, content } = Astro.props;
 ---
 
-<section>
-  <h2 class="text-2xl font-semibold mb-4">{title}</h2>
-  <p class="leading-relaxed">
+<section class="bg-zinc-50 dark:bg-zinc-900 p-4 rounded-lg shadow">
+  <h2 class="text-2xl font-semibold mb-4 text-zinc-900 dark:text-zinc-50">
+    {title}
+  </h2>
+  <p class="leading-relaxed text-zinc-700 dark:text-zinc-300">
     {content}
   </p>
 </section>
