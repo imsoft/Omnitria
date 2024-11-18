@@ -8,7 +8,7 @@ import ProjectCard from "@/components/project/ProjectCard.astro";
 const ourApps: Project[] = [
   {
     imageSrc:
-      "https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736963/the-gaming-corps_mkhh4c.png",
+      "https://res.cloudinary.com/dldo1zcgz/image/upload/v1731888584/the-gaming-corps_mmo8uz.webp",
     title: "The Gaming Corps",
     description:
       "Built an engaging platform for The Gaming Corps, enhancing community interaction and showcasing gaming content effectively.",
@@ -17,7 +17,7 @@ const ourApps: Project[] = [
   },
   {
     imageSrc:
-      "https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736965/cursumi_zyliuq.png",
+      "https://res.cloudinary.com/dldo1zcgz/image/upload/v1731888583/cursumi_mkjioi.webp",
     title: "Cursumi",
     description:
       "Created a tailored e-learning platform to improve accessibility, engagement, and user satisfaction for Cursumi’s students.",
@@ -26,7 +26,7 @@ const ourApps: Project[] = [
   },
   {
     imageSrc:
-      "https://res.cloudinary.com/dldo1zcgz/image/upload/v1731736964/holistia_pu1jfw.png",
+      "https://res.cloudinary.com/dldo1zcgz/image/upload/v1731888582/holistia_ogplmh.webp",
     title: "Holistia",
     description:
       "Developed an engaging platform for Holistia, empowering users with accessible wellness resources and tools for a healthier lifestyle.",
@@ -62,6 +62,7 @@ const ourApps: Project[] = [
               description={app.description}
               category={app.category}
               link={app.link}
+              loading="eager"
             />
           ))
         }

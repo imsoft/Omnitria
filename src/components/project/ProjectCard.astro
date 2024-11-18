@@ -7,9 +7,10 @@ interface Props {
   description: string;
   category: string;
   link: string;
+  loading: "lazy" | "eager";
 }
 
-const { imageSrc, title, description, category, link } = Astro.props;
+const { imageSrc, title, description, category, link, loading } = Astro.props;
 ---
 
 <div
@@ -22,6 +23,7 @@ const { imageSrc, title, description, category, link } = Astro.props;
       class="aspect-[16/9] w-full rounded-2xl bg-zinc-100 dark:bg-zinc-800 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
       width={600}
       height={400}
+      loading={loading}
     />
     <div
       class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-zinc-300 dark:ring-zinc-600"
