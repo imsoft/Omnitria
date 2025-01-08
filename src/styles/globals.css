@@ -69,12 +69,12 @@
 }
 
 /* html, body {
-  background-color: #18181b;
+  background-color: #27272a;
 } */
 
 html[data-theme="dark"],
 body[data-theme="dark"] {
-  background-color: #18181b;
+  background-color: #27272a;
   color: #ffffff;
 }
 
