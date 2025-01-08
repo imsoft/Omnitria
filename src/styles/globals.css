@@ -68,6 +68,18 @@
   }
 }
 
-html, body {
+/* html, body {
   background-color: #18181b;
+} */
+
+html[data-theme="dark"],
+body[data-theme="dark"] {
+  background-color: #18181b;
+  color: #ffffff;
+}
+
+html[data-theme="light"],
+body[data-theme="light"] {
+  background-color: #ffffff;
+  color: #f4f4f5;
 }
